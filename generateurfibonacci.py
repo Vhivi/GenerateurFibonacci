@@ -23,7 +23,23 @@
 
 
 # Génération de la suite et affichage du nombre à la position demandée
+
 def fibonacci(position):
+    """
+    Génère la suite de Fibonacci jusqu'à la position donnée et renvoie le nombre
+    à cette position ainsi que la séquence entière jusqu'à cette position.
+
+    Args:
+        position (int): La position dans la séquence de Fibonacci à générer.
+
+    Returns:
+        tuple: Un tuple contenant le nombre à la position donnée et la séquence
+                entière jusqu'à cette position.
+
+    Raises:
+        ValueError: Si la position donnée n'est pas un entier positif
+                    supérieur à 0.
+    """
     # Vérification de la position donnée
     # Elle doit être un entier positif supérieur à 0
     if position < 1:
@@ -43,7 +59,19 @@ def fibonacci(position):
         return suitelist[position - 1], suitelist
 
 
+
 def main():
+    """
+    Fonction principale qui demande la position du nombre de Fibonacci à
+    générer, génère la suite de Fibonacci jusqu'à cette position et affiche
+    le nombre correspondant ainsi que la suite entière jusqu'à cette position.
+
+    Args:
+        None
+
+    Returns:
+        None
+    """
     while True:
         try:
             # Demande de la position du nombre
