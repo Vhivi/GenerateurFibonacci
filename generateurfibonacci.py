@@ -24,10 +24,12 @@
 
 # Génération de la suite et affichage du nombre à la position demandée
 
+
 def fibonacci(position):
     """
-    Génère la suite de Fibonacci jusqu'à la position donnée et renvoie le nombre
-    à cette position ainsi que la séquence entière jusqu'à cette position.
+    Génère la suite de Fibonacci jusqu'à la position donnée et renvoie le
+    nombre à cette position ainsi que la séquence entière jusqu'à cette
+    position.
 
     Args:
         position (int): La position dans la séquence de Fibonacci à générer.
@@ -43,8 +45,10 @@ def fibonacci(position):
     # Vérification de la position donnée
     # Elle doit être un entier positif supérieur à 0
     if position < 1:
-        raise ValueError('''La position doit être un entier positif
-                         supérieur à 0.''')
+        raise ValueError(
+            """La position doit être un entier positif
+                         supérieur à 0."""
+        )
     else:
         # Génération de la suite jusqu'à la position demandée
         suitelist = [0]
@@ -57,7 +61,6 @@ def fibonacci(position):
             total = a + b
             suitelist.append(total)
         return suitelist[position - 1], suitelist
-
 
 
 def main():
@@ -75,13 +78,23 @@ def main():
     while True:
         try:
             # Demande de la position du nombre
-            position = int(input('''Quel position dans la suite de Fibonacci
-                            voulez-vous voir ?'''))
+            position = int(
+                input(
+                    """Quel position dans la suite de Fibonacci
+                            voulez-vous voir ?"""
+                )
+            )
             # Génération de la suite et affichage dans la console
-            print('Le nombre à la position {} est {}'
-                .format(position, fibonacci(position)[0]))
-            print('Voici la suite entière jusqu\'à la position demandée : {}'
-                .format(fibonacci(position)[1]))
+            print(
+                "Le nombre à la position {} est {}".format(
+                    position, fibonacci(position)[0]
+                )
+            )
+            print(
+                "Voici la suite entière jusqu'à la position demandée : {}"
+                    .format(fibonacci(position)[1]
+                )
+            )
             break
         except ValueError as e:
             print(e)
